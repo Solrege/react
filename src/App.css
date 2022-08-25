@@ -14,4 +14,34 @@ header {
 
 .navBar a {
   padding: 1em;
+  color: black;
+  text-decoration: none;
 }
+
+.navBar a:visited {
+  text-decoration: none;
+}
+
+.card {
+  width: 18rem;
+  display: inline-block;
+  
+  margin: 1em;
+}
+
+.btn {
+  background-color: #ff9a9e;
+  border-color: #ff9a9e;
+  margin: 0.5em; 
+}
+
+.btn:hover{
+  background-color: #ff8488;
+  border-color:#ff8488 ;
+}
+.btn a {
+  text-decoration: none;
+  color: #3b3b3b; }
+
+.button a:visited {
+  text-decoration: none; }

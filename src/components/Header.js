@@ -1,4 +1,4 @@
-
+import CartWidget from "./CartWidget.js"
 
 
 const Header = () => {
@@ -9,11 +9,11 @@ const Header = () => {
                 <h1 className="title"> Tienda de Cupcakes</h1>
 
                 <nav className="navBar">
-                    <a>Inicio</a>
-                    <a>About</a>
-                    <a>Productos</a>
-                    <a>Contacto</a>
-                    <a>Carrito</a>
+                    <a href="#">Inicio</a>
+                    <a href="#">About</a>
+                    <a href="#">Productos</a>
+                    <a href="#">Contacto</a>
+                    <a href="#"><CartWidget/></a>
                 </nav>
             </header>
         </div>
