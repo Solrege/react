@@ -19,8 +19,8 @@ const ItemCount = () => {
     }
 
   return (
-    <div className="container my-5"> 
-        <h2>Comprar</h2>
+    <div> 
+        <h5>Comprar</h5>
         <button onClick={restar} className="btn">-</button>
         <span className="mx-2">{counter}</span>
         <button onClick={sumar} className="btn">+</button>
