@@ -3,64 +3,109 @@
 export const stock = [
     {
         id:1, 
-        nombre: "Vainilla", 
+        nombre: "Cupcake de vainilla", 
         precio:110, 
-        img: "./assets/img/cupcake-vainilla.jpg"
+        img: "/assets/img/cupcake-vainilla.jpg",
+        desc: "Muffin de vainilla con frosting de queso crema, color a elección.",
+        category: "cupcakes",
     },
     
     {
         id:2, 
-        nombre: "Chocolate", 
+        nombre: "Cupcake de chocolate", 
         precio:125, 
-        img:"./assets/img/cupcake-choco-expresso.jpg"
+        img:"/assets/img/cupcake-choco-expresso.jpg",
+        desc: "Muffin de chocolate con frosting de dulce de leche suave.",
+        category: "cupcakes",
     },
     
     {
         id:3, 
-        nombre: "Frutilla", 
+        nombre: "Cupcake de frutilla", 
         precio:120, 
-        img:"./assets/img/cupcake-chantilly-clasico.jpg"
+        img:"/assets/img/cupcake-chantilly-clasico.jpg",
+        desc: "Muffin de vainilla, relleno con frutilla. Frosting sabor frutilla",
+        category: "cupcakes",
     },
     
     {
         id:4, 
-        nombre: "Nutella", 
+        nombre: "Cupcake de nutella", 
         precio:150, 
-        img:"./assets/img/cupcake-chococake.jpg"
+        img:"/assets/img/cupcake-chococake.jpg",
+        desc: "Muffin de chocolate con corazón de Nutella y frosting de Nutella",
+        category: "cupcakes",
     },
     
     {
         id:5, 
-        nombre: "Lemon Pie", 
+        nombre: "Cupcake lemon pie", 
         precio:125, 
-        img:"./assets/img/cupcake-lemon-pie.jpg"
+        img:"/assets/img/cupcake-lemon-pie.jpg",
+        desc: "Muffin sabor limón intenso con frosting de merengue",
+        category: "cupcakes",
     },
     
     {
         id:6, 
-        nombre: "Red Velvet", 
+        nombre: "Cupcake red velvet", 
         precio:120, 
-        img:"./assets/img/cupcake-red-velvet.jpg"
+        img:"/assets/img/cupcake-red-velvet.jpg",
+        desc: "Muffin sabor red velvet con frosting de queso crema",
+        category: "cupcakes",
     },
     
     {
         id:7, 
-        nombre: "Arandanos", 
+        nombre: "Cupcake de arandanos", 
         precio:130, 
-        img:"./assets/img/cupcake-arandano.jpg"
+        img:"/assets/img/cupcake-arandano.jpg",
+        desc: "Muffin de vainilla, relleno de arándanos y frosting de queso crema.",
+        category: "cupcakes",
     },
     
     {
         id:8, 
-        nombre: "Cheesecake", 
+        nombre: "Cupcake cheesecake", 
         precio:125, 
-        img:"./assets/img/cupcake-cheesecake.jpg"
+        img:"/assets/img/cupcake-cheesecake.jpg",
+        desc: "Muffin con base de galletitas, cuerpo de queso y capa de mermelada. Frosting de queso crema",
+        category: "cupcakes",
     },
     
     {
         id:9, 
-        nombre: "Brownies", 
+        nombre: "Cupcake brownie", 
         precio:140, 
-        img:"./assets/img/cupcake-brownie.jpg"
-    } 
+        img:"/assets/img/cupcake-brownie.jpg",
+        desc: "Muffin de brownie con frosting de merengue",
+        category: "cupcakes",
+    }, 
+
+    {
+        id:10, 
+        nombre: "Macarons", 
+        precio:600, 
+        img:"/assets/img/macarons.jpg",
+        desc: "bCaja por 6 macarons. Se pueden elegir 2 colores por caja",
+        category: "dulces",
+    }, 
+
+    {
+        id:11, 
+        nombre: "Copitas", 
+        precio:1000, 
+        img:"/assets/img/vasitos.jpg",
+        desc: "6 copitas del mismo sabor. A elección: cheesecake, lemon pie, brownie con dulce de leche y frutillas, oreo, chocotorta",
+        category: "dulces",
+    }, 
+
+    {
+        id:12, 
+        nombre: "Alfacookies", 
+        precio:700, 
+        img:"/assets/img/alfajores.jpg",
+        desc: "Caja por 6 unidades de cookies de vainilla con chips de chocolate, rellenas de dulce de leche",
+        category: "dulces",
+    }, 
 ]
