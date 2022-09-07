@@ -108,4 +108,31 @@ export const stock = [
         desc: "Caja por 6 unidades de cookies de vainilla con chips de chocolate, rellenas de dulce de leche",
         category: "dulces",
     }, 
+
+    {
+        id:13, 
+        nombre: "Brownie", 
+        precio:3500, 
+        img:"/assets/img/brownie.jpg",
+        desc: "Torta de brownie con dulce de leche y crema. Decoración con chocolates, colores a elección.",
+        category: "tortas",
+    }, 
+
+    {
+        id:14, 
+        nombre: "Chocotorta", 
+        precio:3500, 
+        img:"/assets/img/chocotorta.jpg",
+        desc: "Clásica chocotorta con galletitas de chocolate y relleno de dulce de leche + queso crema. Decoración con chocolates, colores a elección.",
+        category: "tortas",
+    }, 
+
+    {
+        id:15, 
+        nombre: "Oreo", 
+        precio:4000, 
+        img:"/assets/img/oreo.jpg",
+        desc: "Base de galletitas oreo, dulce de leche y crema. Decoración con chocolates, colores a elección.",
+        category: "tortas",
+    }, 
 ]
