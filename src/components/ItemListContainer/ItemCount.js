@@ -1,22 +1,21 @@
 import React from 'react'
-import { useState } from 'react'
 
 
-const ItemCount = () => {
+const ItemCount = ({max, counter, setCounter, handleAgregar}) => {
 
-    const [counter, setCounter] = useState (0)
+    const restar = () => {
+            if (counter > 0) {
+                setCounter(counter - 1)
+            }
+        }
 
     const sumar = () => {
-        if (counter < 10) {
+        if (counter < max) {
             setCounter(counter + 1)
         }
     }
 
-    const restar = () => {
-        if (counter > 0) {
-            setCounter(counter - 1)
-        }
-    }
+   
 
   return (
     <div> 
@@ -24,6 +23,8 @@ const ItemCount = () => {
         <button onClick={restar} className="btn">-</button>
         <span className="mx-2">{counter}</span>
         <button onClick={sumar} className="btn">+</button>
+
+        <button onClick={handleAgregar} className="btn">Agregar al carrito</button>
     </div>
   )
 }
