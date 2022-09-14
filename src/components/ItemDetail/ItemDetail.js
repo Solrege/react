@@ -1,6 +1,6 @@
-import React from 'react'
 import { useState } from 'react'
 import ItemCount from '../ItemListContainer/ItemCount'
+import { Link } from 'react-router-dom'
 
 
 const ItemDetail = ( {item}) => {
@@ -35,7 +35,9 @@ const ItemDetail = ( {item}) => {
                         counter={cantidad}
                         setCounter={setCantidad}
                         handleAgregar={handleAgregar}/>
+                    <Link to="/cart" className="btn">Terminar mi compra</Link>
                 </div>
+                
             </div>
             
         </div>
