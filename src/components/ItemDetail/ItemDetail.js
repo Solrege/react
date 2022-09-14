@@ -1,10 +1,15 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import ItemCount from '../ItemListContainer/ItemCount'
 import { Link } from 'react-router-dom'
+import { CartContext } from '../../context/CartContext'
+import Swal from 'sweetalert2'
 
 
 const ItemDetail = ( {item}) => {
 
+    const { cart, addToCart, isInCart } = useContext(CartContext)
+    console.log(cart)
+    
     const [cantidad, setCantidad] = useState (1)
 
     const handleAgregar = () => {
@@ -15,7 +20,15 @@ const ItemDetail = ( {item}) => {
             cantidad
         }
         
-        console.log(itemToCart)
+        
+        addToCart(itemToCart)
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Tu producto fue agregado al carrito',
+            showConfirmButton: false,
+            timer: 1500
+          })
     }
 
     if (!item) {
@@ -30,12 +43,18 @@ const ItemDetail = ( {item}) => {
                     <h3 className="card-title">{item.nombre}</h3>
                     <p className="card-text">{item.desc}</p>
                     <p className="card-text">Precio:$ {item.precio}</p>
-                    <ItemCount 
-                        max={item.stock} 
-                        counter={cantidad}
-                        setCounter={setCantidad}
-                        handleAgregar={handleAgregar}/>
-                    <Link to="/cart" className="btn">Terminar mi compra</Link>
+
+                    {
+                        isInCart(item.id)
+                        ? <Link to="/cart" className="btn">Terminar mi compra</Link>
+                        : <ItemCount 
+                            max={item.stock} 
+                            counter={cantidad}
+                            setCounter={setCantidad}
+                            handleAgregar={handleAgregar}/>
+                    }
+                    
+                    
                 </div>
                 
             </div>
