@@ -2,15 +2,18 @@ import { useEffect, useState } from "react";
 import { pedirDatos } from "../../helpers/pedirDatos";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from 'react-router-dom'
+import Loader from "../Loader/Loader";
 
 
 const ItemListContainer = () => {
     const [productos, setProductos] = useState([])
-
     const { categoryId } = useParams()
-        console.log(categoryId)
+    const [loading, setLoading] = useState(true)
+        
 
     useEffect(() => {
+        setLoading(true)
+
         pedirDatos ()
             .then( (res) => {
                 if (!categoryId){
@@ -23,14 +26,18 @@ const ItemListContainer = () => {
                 console.log(error)
             })
             .finally( () => {
-                console.log("Fin del proceso")
+                setLoading(false)
             })
     }, [categoryId])
 
 
     return (
         <div>
-            <ItemList productos={productos}/>
+            {
+                loading
+                ? <Loader/>
+                : <ItemList productos={productos}/>
+            }
         </div>
     )
 }
