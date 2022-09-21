@@ -1,9 +1,10 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { pedirDatos } from '../../helpers/pedirDatos'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import Loader from '../Loader/Loader'
+import { doc, getDoc } from 'firebase/firestore'
+import { db } from '../../firebase/config'
 
 const ItemDetailContainer = () => {
 
@@ -14,18 +15,16 @@ const ItemDetailContainer = () => {
 
     useEffect(() => {
         setLoading(true)
+        const docRef = doc(db, 'productos', itemId)
 
-        pedirDatos ()
-            .then( (res) => {
-                console.info(itemId)
-                setItem( res.find((prod) => prod.id === Number(itemId)))
+        getDoc(docRef)
+            .then((doc) => {
+                setItem({id: doc.id, ...doc.data()})
             })
-            .catch( (error) => {
-                console.log(error)
-            })
-            .finally( () => {
+            .finally(() => {
                 setLoading(false)
             })
+        
     }, [itemId])
     
     return (
