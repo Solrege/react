@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react'
+import { createContext, useState, useContext } from 'react'
 import Swal from 'sweetalert2'
 
 
@@ -55,6 +55,17 @@ export const CartProvider = ({children}) => {
             }
           })
     }
+    
+    const terminarCompra = (id) => {
+        Swal.fire({
+          title: 'Compra exitosa!',
+          text: `Tu número de orden es: ${id}`,
+          icon: 'success',
+          confirmButtonColor: '#3085d6',
+          confirmButtonText: 'Terminar'
+        })
+        setCart([])
+      }
 
     return (
         <CartContext.Provider value= { {
@@ -65,8 +76,13 @@ export const CartProvider = ({children}) => {
             cartTotal,
             emptyCart,
             removeItem,
+            terminarCompra,
           } }>
             {children}
         </CartContext.Provider>
     )
+}
+
+export const useCartContext = () => {
+    return useContext(CartContext)
 }

@@ -45,3 +45,7 @@ header {
 
 .button a:visited {
   text-decoration: none; }
+
+.card-title {
+  white-space: nowrap;
+}
