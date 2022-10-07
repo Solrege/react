@@ -7,6 +7,7 @@ import Cart from './components/Cart/Cart';
 import { BrowserRouter , Routes , Route } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
 import Checkout from './components/Checkout/Checkout';
+import Footer from './components/Footer/Footer';
 
 
 
@@ -32,6 +33,8 @@ function App() {
             <Route path='*'/>
             
           </Routes>
+
+        <Footer/>
 
         </BrowserRouter>
 

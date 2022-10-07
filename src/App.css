@@ -1,3 +1,11 @@
+* {
+  box-sizing: border-box;
+  font-family: "Domine"; }
+
+  @font-face {
+    font-family: "Domine";
+    src: url ("https://fonts.google.com/specimen/Domine"); }
+
 header {
   background-image: linear-gradient(45deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%)
 }
@@ -6,6 +14,11 @@ header {
   font-weight: bold;
   text-align: center;
   padding: 1em }
+
+.subtitle {
+  font-weight: bold;
+  padding-left: 0.5em;
+}
 
 .navBar {
   display: flex;
@@ -16,6 +29,7 @@ header {
   padding: 1em;
   color: black;
   text-decoration: none;
+  font-size: 120%;
 }
 
 .navBar a:visited {
@@ -49,3 +63,6 @@ header {
 .card-title {
   white-space: nowrap;
 }
+
+footer {
+  background-image: linear-gradient(-45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%); }

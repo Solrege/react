@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <div>
             <header>
-                <h1 className="title"> Emma Repostería</h1>
+                <h1 className="title"> La Guadalupe Repostería</h1>
 
                 <nav className="navBar">
                     <Link to="/">Inicio</Link>

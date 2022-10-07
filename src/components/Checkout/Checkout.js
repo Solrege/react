@@ -58,7 +58,7 @@ const Checkout = () => {
 
     return (
         <div className='container'>
-            <h2>Checkout</h2>
+            <h2 className='subtitle'>Checkout</h2>
             <hr/>
 
             <form onSubmit={handleSubmit}>

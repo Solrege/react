@@ -5,7 +5,7 @@ const ItemList = ( {productos = [] } ) => {
 
   return (
     <section className="container my-5">
-            <h2>Productos</h2>
+            <h2 className='subtitle'>Productos</h2>
             <hr/>
                 { productos.map((prod) => {
                     return (
